@@ -1,0 +1,155 @@
+//   =====================================================================================
+//   PROFILE HERO
+//   =====================================================================================
+.profile-header{
+  margin-bottom: 0;
+}
+
+.profile-hero{
+  display: block;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+  border-bottom: 2px solid $black;
+  background: url('../images/profileHeroMobile.jpg') center center no-repeat;
+  background-size: cover;
+
+  @include breakpoint($small) {
+    background: url('../images/profileHero.jpg') center center no-repeat;
+  }
+}
+
+.profile-hero__profile-pic-wrapper{
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+
+  .spinner{
+    width: 74px;
+    height: 74px;
+    margin-left: -37px;
+    margin-top: -37px;
+    border-top: 3px solid rgba(0,0,0,0);
+    border-right: 3px solid rgba(0,0,0,0);
+    border-bottom: 3px solid rgba(0,0,0,0);
+    border-left: 3px solid $tertiary-colour;
+  }
+
+  @include breakpoint($x-small){
+    display: block;
+    margin-bottom: 10px;
+    padding-right: 0;
+    width: auto;
+  }
+
+  @include breakpoint($medium){
+    .spinner{
+      width: 94px;
+      height: 94px;
+      margin-left: -47px;
+      margin-top: -47px;
+    }
+  }
+}
+
+.profile-pic__edit-icon {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: $white;
+
+  &:after {
+    content: "\f040";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    color: $black;
+    z-index: 1;
+    @include transform(translate(-50%, -50%))
+  }
+}
+
+.profile-pic__wrapper{
+  position: relative;
+  cursor: pointer;
+
+  @include breakpoint($x-small){
+    display: inline-block;
+  }
+}
+
+.profile-hero__profile-pic{
+  width: 98px;
+  height: auto;
+  padding: 2px;
+  border: 3px solid $black;
+  border-radius: 100%;
+  background-color: $white;
+
+  @include breakpoint($small){
+    width: 100px;
+  }
+}
+
+.profile-pic__file-input {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.profile-hero__name,
+.profile-hero__details {
+  display: inline-block;
+  min-width: 100px;
+  padding: 15px 20px;
+  margin: 0;
+  font-family: $body-font-primary;
+  font-size: 32px;
+  text-transform: capitalize;
+  color: $black;
+
+  @include breakpoint($x-small){
+    display: inline-block;
+  }
+
+  @include breakpoint($medium){
+    font-size: 32px;
+  }
+}
+
+.profile-hero__name {
+  font-size: 24px;
+  padding-top: 25px;
+  margin-top: -24px;
+
+  @include breakpoint($x-small){
+    margin-top: -35px;
+  }
+}
+
+.profile-hero__details {
+  font-family: $header-font-primary;
+  text-transform: lowercase;
+  font-size: 43px;
+  padding: 15px 20px;
+  span {
+    font-size: 15px;
+    font-family: $header-font-secondary;
+    display: block;
+  }
+}
+
+.profile-hero__customer-no {
+  margin: 0;
+  font-family: $header-font-primary;
+  font-size: 60px;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="41px" height="38px" viewBox="0 0 41 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="WEBSITE-ORDERING" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Ordering-Menu---Modal-Choice" sketch:type="MSArtboardGroup" transform="translate(-798.000000, -358.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(410.000000, 246.000000)">
+                <g id="Shape" transform="translate(388.000000, 112.000000)" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-1143" fill="#fdeae5" x="0" y="0" width="41" height="38"></rect>
+                    <path d="M18,35.8823529 L18,35.8823529 C26.7715813,35.8823529 33.8823529,28.7715813 33.8823529,20 C33.8823529,11.2284187 26.7715813,4.11764706 18,4.11764706 C9.22841868,4.11764706 2.11764706,11.2284187 2.11764706,20 C2.11764706,28.7715813 9.22841868,35.8823529 18,35.8823529 L18,35.8823529 Z M18,38 L18,38 C8.0588745,38 0,29.9411255 0,20 C0,10.0588745 8.0588745,2 18,2 C27.9411255,2 36,10.0588745 36,20 C36,29.9411255 27.9411255,38 18,38 L18,38 Z" fill="#221E1F"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

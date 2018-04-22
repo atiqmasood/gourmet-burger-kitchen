@@ -1,0 +1,394 @@
+.order-confirm-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include breakpoint($small) {
+    margin-top: 40px;
+  }
+
+  @include breakpoint($medium) {
+    width: 50%;
+    margin: 40px auto;
+  }
+
+}
+
+.order-confirmation__thanks {
+  margin: 20px 0 50px 0;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+
+  font-size: 37.5px;
+  font-family: $header-font-secondary;
+  text-align: center;
+  color: $red;
+}
+
+.order-confirmation__ticket {
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  display: block;
+  margin-top: 17px;
+  background-color: #FDEAE5;
+  padding: 30px 15px 30px 15px;
+  border: 23px double #191919;
+  -moz-border-image: url(../images/menuFeatureBorder.svg) 22 22 22 22 stretch;
+  -webkit-border-image: url(../images/menuFeatureBorder.svg) 22 22 22 22 stretch;
+  border-image: url(../images/menuFeatureBorder.svg) 22 22 22 22 stretch;
+}
+
+.order-no__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.order-no{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $header-font-primary;
+  font-size: 62.5px;
+  margin: 0.15em 0 0 0;
+  color: $red;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.order-confirmation__detail-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: $primary-colour;
+}
+
+.order-confirmation__order-no-title{
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 20px;
+  background-color: #FDEAE5;
+  font-family: $header-font-primary;
+  color: $tertiary-colour;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include transition(opacity .2s ease-out);
+
+  &.fade{
+    opacity: 0;
+  }
+}
+
+.order-confirmation__name {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) !important;
+  margin: 0;
+  font-family: $body-font-primary;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase !important;
+  color: $black;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: $primary-colour;
+}
+
+.order-no__wrapper .spinner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  visibility: visible;
+  margin-top: -25px;
+}
+
+.order-no__text {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: $red;
+  font-size: 2em;
+  text-align: center;
+  font-family: $body-font-primary;
+}
+
+.order-confirm__notification{
+  margin-top: 40px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: $body-font-primary;
+  font-size: 18px;
+  color: $red;
+  text-transform: uppercase;
+
+  span{
+    margin-top: 5px;
+    display: block;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    text-transform: none;
+    color: $red;
+  }
+}
+
+.order-confirm__payment-wrapper{
+  display: table;
+  width: 100%;
+}
+
+.order-confirm__payment-label{
+  display: table-cell;
+  width: 80%;
+  vertical-align: baseline;
+
+  i,
+  h3{
+    display: inline-block;
+    margin: 0;
+  }
+
+  i{
+    margin-right: 5px;
+  }
+
+  h3{
+    font-family: $header-font-primary;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint($small){
+    h3{
+      font-size: 18px;
+    }
+  }
+}
+
+.order-confirm__payment-total {
+  display: table-cell;
+  padding-top: 5px;
+  width: 20%;
+  vertical-align: top;
+  text-align: right;
+  font-family: $header-font-primary;
+  font-size: 18px;
+  color: $red;
+}
+
+.order-confirm__payment-title-wrapper,
+.order-confirm__directions-title-wrapper {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  clear: both;
+  margin: 30px 0;
+  height: 27px;
+}
+
+.order-confirm__payment-title-decoration,
+.order-confirm__directions-title-decoration {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  float: left;
+  border-top: 2px solid $black;
+  border-bottom: 2px solid $black;
+  padding: 2px 0 2px 0;
+}
+
+.order-confirm__payment-title-text,
+.order-confirm__directions-title-text {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  width: 175px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0;
+  vertical-align: middle;
+  background-color: $primary-colour;
+  font-size: 25px;
+  font-family: $header-font-secondary;
+  color: $red;
+  text-align: center;
+}
+
+.order-confirm__location-wrapper,
+.delivery-address__wrapper{
+  display: table;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.order-confirm__location-label,
+.delivery-address__label{
+  display: table-cell;
+  width: 50%;
+  vertical-align: baseline;
+
+  i,
+  h3{
+    display: inline-block;
+    margin: 0;
+  }
+
+  i{
+    margin-right: 5px;
+  }
+
+  h3{
+    font-family: $header-font-primary;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint($small){
+    h3{
+      font-size: 18px;
+    }
+  }
+}
+
+.order-confirm__address-wrapper{
+  display: table-cell;
+  padding-top: 5px;
+  width: 50%;
+  vertical-align: top;
+  text-align: right;
+}
+
+.address-wrapper__location-name{
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $header-font-primary;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $red;
+}
+
+.address-line{
+  margin-bottom: 5px;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $black;
+
+  &:last-of-type{
+    margin: 0;
+  }
+}
+
+.order-confirm__collection-wrapper{
+  display: table;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid $black;
+}
+
+.order-confirm__collection-label{
+  display: table-cell;
+  width: 80%;
+  vertical-align: baseline;
+
+  i,
+  h3{
+    display: inline-block;
+    margin: 0;
+  }
+
+  i{
+    margin-right: 5px;
+  }
+
+  h3{
+    font-family: $header-font-primary;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint($small){
+    h3{
+      font-size: 18px;
+    }
+  }
+}
+
+.order-confirm__collection-slot{
+  display: table-cell;
+  padding-top: 5px;
+  width: 20%;
+  vertical-align: top;
+  text-align: right;
+  font-family: $header-font-primary;
+  font-size: 18px;
+  color: $red;
+}
+
+.order-confirm__direction-btn-wrapper{
+  @include breakpoint($small){
+    @include clearfix();
+  }
+}
+
+.directions-btn{
+  a{
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: $red;
+    color: $primary-colour;
+    text-align: center;
+    font-family: $body-font-primary;
+    font-size: 14px;
+  }
+
+  @include breakpoint($small){
+    display: inline-block;
+
+    &:last-of-type{
+      float: right;
+    }
+
+    a{
+      width: 250px;
+      font-size: 18px;
+    }
+
+  }
+}
+
+.delivery-address__wrapper{
+  .address-wrapper{
+    text-align: right;
+  }
+}
+
+.delivery-address__label{}

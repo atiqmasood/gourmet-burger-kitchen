@@ -1,0 +1,615 @@
+.confirmation-panel{
+  padding: 0;
+}
+
+.collection-details{
+  padding: 0;
+}
+
+.collection-details__wrapper{
+  margin-top: 10px;
+}
+
+.collection-details__title{
+  position: relative;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $header-font-primary;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  border-top: 3px solid $black;
+  border-bottom: 3px solid $black;
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: calc(100% - 4px);
+    width: 100%;
+    border-top: 1px solid $primary-colour;
+    border-bottom: 1px solid $primary-colour;
+  }
+}
+
+.collection-details__location-wrapper{
+  position: relative;
+  display: table;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid $black;
+  @include clearfix();
+
+  @include breakpoint($small){
+    padding-left: 0;
+    padding-right: 0;
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $black;
+    }
+  }
+}
+
+.collection-details__location-label,
+.collection-details__address-label,
+.collection-details__collection-label
+{
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+
+  i,
+  h4{
+    margin: 0;
+    display: inline-block;
+  }
+
+  i{
+    margin-right: 10px;
+  }
+
+  h4{
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $black;
+  }
+
+  @include breakpoint($small){
+    vertical-align: top;
+  }
+
+  @include breakpoint($medium){
+    h4{
+      font-size: 18px;
+    }
+  }
+}
+
+
+.collection-details__location-name-wrapper{
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  text-align: right;
+
+  a{
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $red;
+    text-decoration: underline;
+    &:hover,
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.collection-details__name{
+  margin: 0;
+  font-family: $header-font-primary;
+  font-size: 16px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.collection-details__outer-details-wrapper {
+  padding:0px 15px;
+
+  @include breakpoint($small){
+    padding: 0;
+  }
+}
+
+.collection-details__collection-wrapper {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid $black;
+  @include clearfix();
+
+  .flypay-select__wrapper{
+    display: table-cell;
+    width: 30%;
+    vertical-align: middle;
+    text-align: right;
+  }
+}
+
+.collection-details__collection-label{
+  width: 70%;
+}
+
+.confirmation-payment{
+  position: relative;
+
+  .card-wrapper{
+    position: relative;
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+  }
+
+  @include breakpoint($small){
+    .card-wrapper{
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      border-bottom: none
+    }
+  }
+}
+
+.order-details__title{
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: $header-font-primary;
+  font-size: 22px;
+  color: $black;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+  }
+
+  @include breakpoint($small){
+    &:before{
+      display: none;
+    }
+  }
+
+  @include breakpoint($medium){
+    font-size: 28px;
+
+    &:after{
+      left: -15px;
+      width: calc(100% + 30px);
+    }
+  }
+}
+
+.order-details__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $secondary-colour;
+
+  li{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $black;
+  }
+}
+
+.orderConfirmCustom{
+  display: table;
+  width: 100%;
+
+  .orderConfirmBody{
+    display: table-cell;
+    width: 80%;
+    vertical-align: top;
+
+    h3{
+      margin: 0;
+      font-family: $header-font-primary;
+      text-transform: uppercase;
+      color: $red;
+      font-size: 3.2em;
+    }
+
+    p{
+      margin: 0;
+      font-family: $body-font-primary;
+      font-size: 12px;
+    }
+  }
+
+  .orderConfirmPrice{
+    display: table-cell;
+    width: 20%;
+    vertical-align: top;
+    text-align: right;
+    font-family: $header-font-primary;
+    font-size: 2.7em;
+
+    &.negative{
+
+    }
+  }
+}
+
+.orderConfirmStd{
+  display: table;
+  width: 100%;
+
+  .orderConfirmBody{
+    display: table-cell;
+    width: 80%;
+    vertical-align: top;
+
+    span{
+      display: inline-block;
+      margin: 0;
+      margin-right: 5px;
+      font-family: $header-font-primary;
+      font-size: 3em;
+      text-transform: lowercase;
+    }
+
+    h3{
+      display: inline-block;
+      margin: 0;
+      font-family: $header-font-primary;
+      font-size: 3.2em;
+      color: $red;
+      text-transform: uppercase;
+    }
+  }
+
+  .orderConfirmPrice{
+    display: table-cell;
+    width: 20%;
+    vertical-align: top;
+    margin: 0;
+    text-align: right;
+    font-family: $header-font-primary;
+    font-size: 2.7em;
+    text-transform: uppercase;
+    color: $black;
+
+    &.negative{
+
+    }
+  }
+}
+
+.order-details__wrapper{
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include breakpoint($small){
+    margin-bottom: 15px;
+    border: 2px solid $black;
+  }
+}
+
+.edit-order-link{
+  margin-bottom: 30px;
+  text-align: right;
+  a{
+    display: inline-block;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    text-decoration: underline;
+    color: $red;
+
+    &:hover,
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.order-confirm__total-wrapper{
+  display: table;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  border-top: 2px solid $black;
+
+  .order-confirm__total-label{
+    display: table-cell;
+    width: 50%;
+    vertical-align: bottom;
+    margin: 0;
+    font-family: $header-font-primary;
+    font-size: 24px;
+    color: $black;
+  }
+
+  .order-confirm__total{
+    display: table-cell;
+    width: 50%;
+    vertical-align: bottom;
+    margin: 0;
+    font-family: $header-font-primary;
+    font-size: 24px;
+    text-align: right;
+  }
+
+  @include breakpoint($medium){
+    .order-confirm__total-label,
+    .order-confirm__total{
+      font-size: 24px;
+    }
+  }
+}
+
+.order-confirm__button-wrapper{
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+
+  .flypay-button{
+    width: 100%;
+  }
+
+  @include breakpoint($small){
+    .flypay-button{
+      width: 250px;
+    }
+  }
+}
+
+.confirmation-cvc-form{
+  padding: 15px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  .cvc-wrapper{
+    position: relative;
+    text-align: right;
+  }
+
+  .cvc-input__label{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $black;
+    @include transform(translateY(-50%));
+  }
+
+  @include breakpoint($small){
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+
+    .cvc-input__label{
+      @include transform(translateX(calc(-100% - 10px)) translateY(-50%));
+    }
+  }
+}
+
+.payment-form__change-payment{
+  display: block;
+  font-family: $body-font-primary;
+  font-size: 12px;
+  text-decoration: underline;
+  margin-top: 5px;
+  color: $red;
+}
+
+.delivery-confirm__wrapper{
+  margin-bottom: 15px;
+
+  .collection-details__wrapper{
+    padding: 0;
+
+    @include breakpoint($small){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.collection-details__address{
+  position: relative;
+  display: table;
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  @include clearfix();
+
+  //&:after{
+  //  content: '';
+  //  position: absolute;
+  //  bottom: 0;
+  //  left: 15px;
+  //  width: calc(100% - 30px);
+  //  height: 1px;
+  //  background-color: $black;
+  //}
+
+  @include breakpoint($small){
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $black;
+    }
+  }
+}
+
+.collection-details__address-label{
+  width: 50%;
+}
+
+.collection-details__postcode{
+  display: table-cell;
+  width: 50%;
+  vertical-align: bottom;
+  text-align: right;
+
+  .postcode-label{
+    display: inline-block;
+    margin: 0;
+    margin-right: 5px;
+    font-family: $body-font-primary;
+    font-size: 14px;
+
+  }
+
+  h4{display: inline-block;
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  a{
+    display: block;
+    font-family: $body-font-primary;
+    font-size: 12px;
+    color: $primary-colour;
+    text-decoration: underline;
+    &:hover,
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.collection-details__address-fields{
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: $black;
+  }
+
+  .delivery-address__line{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  @include breakpoint($small){
+    padding-left: 0;
+    padding-right: 0;
+
+    &:after{
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.collection-details__postcode-lookup{
+  margin-bottom: 10px;
+
+  .flypay-select{
+    width: 100%;
+    border-color: $black;
+
+    &.success{
+      border-color: $green;
+    }
+  }
+}
+
+.delivery-address__add-info{
+  height: 10em;
+}
+
+.postcode-error__wrapper{
+  display: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  border: 1px solid $red;
+
+  .postcode-error{
+    margin: 0;
+  }
+}
+
+.delivery-address__line-three{
+  text-transform: uppercase;
+}
+
+.collection-details__delivery-time-advice{
+  margin: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $black;
+  
+  span{
+    color: $red;
+  }
+
+  @include breakpoint($medium){
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

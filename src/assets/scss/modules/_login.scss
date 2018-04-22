@@ -1,0 +1,206 @@
+#login-form{
+  position: relative;
+}
+
+.login-content{
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include clearfix();
+
+  @include breakpoint($small){
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 2px solid black;
+    width: 60%;
+  }
+
+  @include breakpoint($medium){
+    width: 40%;
+  }
+
+  @include breakpoint($large){
+
+  }
+}
+
+.login-form{
+  margin-bottom: 10px;
+}
+
+.login-form__title{
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $header-font-primary;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+
+  @include breakpoint($small){
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+  }
+
+  @include breakpoint($medium){
+    font-size: 28px;
+  }
+}
+
+.login-form__main-text{
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $black;
+}
+
+.login-form__errors{}
+
+.login-form__email{
+  position: relative;
+  margin-bottom: 5px;
+
+  .fa{
+    color: $black;
+  }
+
+  label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin: 0;
+    @include transform(translateY(calc(-50% - 1px)));
+  }
+
+  input{
+    border: none;
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 5px;
+    padding-left: 35px;
+    font-family: $body-font-primary;
+    font-size: 18px;
+    text-transform: lowercase;
+    color: $black;
+    border: 1px solid $black;
+
+    @include placeholder {
+      font-family: $body-font-primary;
+      font-size: 14px;
+      text-transform: none;
+      padding-top: 4px;
+    }
+
+    &.parsley-error{
+      border-color: $red;
+    }
+
+
+    &.parsley-success{
+      border-color: $green;
+    }
+  }
+}
+
+.login-form__sign-up-link,
+.login-form__forgot-link{
+  margin-bottom: 15px;
+  float: right;
+  font-family: $body-font-primary;
+  color: $tertiary-colour;
+  text-decoration: underline;
+  font-size: 12px;
+  text-align: right;
+  display: inline-block;
+
+  & + *{
+    clear: both;
+  }
+}
+
+.login-form__passcode-label{
+  margin: 0;
+  margin-bottom: 5px;
+
+  .fa{
+    margin-right: 5px;
+  }
+}
+
+.login-form__pass-text{
+  display: inline-block;
+  margin: 0;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $black;
+}
+
+.login-form__passcode{
+  margin-bottom: 10px;
+
+  @include breakpoint($small){
+    @include clearfix();
+  }
+}
+
+.passcode-boxes{
+  margin-bottom: 5px;
+
+  .passcode-box{
+    &:first-of-type{
+      margin-left: 0;
+    }
+  }
+
+  @include breakpoint($small){
+    display: inline-block;
+    float: right;
+  }
+
+}
+
+.login-form .flypay-button{
+  width: 100%;
+
+  @include breakpoint($small){
+    width: 250px;
+    font-size: 18px;
+  }
+}
+
+.login-content__powered-by{
+  float: right;
+  width: 70px;
+}
+
+.login-form__errors{
+  display: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $red;
+  border: 1px solid $red;
+  background-color: $secondary-colour;
+
+  a{
+    color: $black;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus{
+      outline: none;
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+}

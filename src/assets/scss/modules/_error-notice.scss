@@ -1,0 +1,50 @@
+//   =====================================================================================
+//   NOTICE PAGES
+//
+//   Currently used for "critical" error pages
+//   =====================================================================================
+
+.container.noticePage {
+  min-height: 100vh;
+  position: relative;
+}
+
+.noticePage {
+  section.siteNotice {
+    padding-bottom: 120px;
+
+    .noticeContent {
+      margin-bottom: 40px;
+      margin-top: 15vh;
+
+      /* Grabbed this from #errorBody h2. */
+      h2 {
+        font-size: 43.75px;
+        line-height: 48.125px;
+        color: $red;
+        font-family: $header-font-secondary;
+        transform: rotate(2deg);
+        text-align: center;
+        margin: 1em 0.06em 1em 0;
+        clear: both;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 28.5714px;
+        color: #000000;
+        font-weight: medium;
+        text-align: center;
+        clear: both;
+        margin: 20px 0 0;
+        padding: 0 15%;
+      }
+    }
+  }
+
+  .main-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,154 @@
+.social-footer {
+  border-top: 0.4em solid #191918;
+  padding: 10px 0 0 0;
+
+  h4 {
+    margin: 6px 0 0 0;
+    font-family: $header-font-primary;
+    font-size: 2.8em;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: $black;
+
+      &:link,
+      &:hover,
+      &:visited,
+      &:active {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+
+  @include breakpoint($small){
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black;
+  }
+}
+
+.site-footer {
+  margin-top: 1.5em;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    color: $black;
+
+    &:link,
+    &:hover,
+    &:visited,
+    &:active {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+.site-footer__links {
+  @include breakpoint($small){
+    padding-left: 0;
+  }
+
+  ul {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    font-family: $body-font-primary;
+    list-style: none;
+    display-inside: inline-block;
+    float: left;
+    font-size: 1.8em;
+    margin: 0 0 0 5px;
+    padding: 0 5px 0 0;
+    border-right: 1.5px solid $black;
+
+    &.first {
+      margin-left: 0;
+    }
+
+    &.last {
+      border-right: none;
+    }
+
+    @include breakpoint($small){
+      margin: 0 0 0 1em;
+      padding: 0 1em 0 0;
+    }
+
+  }
+}
+
+.site-footer__flypay {
+  @include breakpoint($small){
+    padding-right: 0;
+
+    p {
+      text-align: right;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    font-family: $body-font-primary;
+  }
+}
+
+.social-icons{
+  text-align: left;
+
+  @include breakpoint($small){
+    float: right;
+    text-align: right;
+  }
+}
+
+.social-icons h4{
+  display: inline-block;
+  margin: 0 17.5px 0 0;
+  font-family: $header-font-primary;
+  font-size: 17.5px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.social-icons > a{
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+  color: $black;
+}
+
+.social-icons > a:last-of-type{
+  margin-right: 0;
+}
+
+.social-icons .fa {
+  color: black;
+  font-size: 22px;
+  @include transition(color .2s ease-out);
+}
+
+.social-icons__built-by{
+  margin: 0;
+  color: $black;
+  font-size: 12px;
+  font-family: $body-font-primary;
+}
+
+.social-icons__built-by > a{
+  color: $black;
+}
+
+.social-icons__built-by > a:hover{
+  text-decoration: underline;
+}
+
+.social-icons__built-by > a:focus{
+  outline: none;
+}

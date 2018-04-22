@@ -1,0 +1,197 @@
+.header{
+  position: relative;
+  padding: 15px 0;
+  min-height: 80px;
+  border-bottom: none;
+  border-bottom: 4px solid $black;
+  text-align: center;
+  background-color: transparent;
+
+}
+
+.header__logo {
+  width: 80px;
+
+  @include breakpoint($small) {
+    width: 100px;
+  }
+}
+
+.header__profile-wrapper{
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  text-align: center;
+  font-family: $header-font-primary;
+  font-size: 14px;
+  text-transform: uppercase;
+  @include transform(translateY(-50%));
+
+  &:focus{
+    outline: none;
+  }
+
+  a {
+    color: $black;
+
+    &:first-of-type {
+      text-decoration: none;
+    }
+  }
+
+  @include breakpoint($medium) {
+    display: table;
+    left: inherit;
+    right: 15px;
+  }
+}
+
+.header__profile-img{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  //padding: 2px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid $black;
+  border-radius: 100%;
+  background-color: $white;
+
+  @include breakpoint($medium) {
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+}
+
+.header__profile-link {
+  display: none;
+  font-size: 18px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include breakpoint($medium) {
+    display: inline-block;
+  }
+}
+
+.header__login-link{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  display: block;
+  text-align: center;
+  font-family: $header-font-primary;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $black;
+  @include transform(translateY(-50%));
+
+  &:hover,
+  &:focus,
+  &:active{
+    outline: none;
+    text-decoration: none;
+    color: $tertiary-colour;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &.is-hidden{
+    display: none;
+  }
+
+  @include breakpoint($medium) {
+    display: none;
+  }
+
+}
+
+.header__link-wrapper {
+  display: none;
+
+  @include breakpoint($medium) {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 24px;
+
+    &.is-active {
+      .header__link {
+        padding: 0 5px 5px 5px;
+        border-bottom: 5px solid $tertiary-colour;
+        color: $primary-colour;
+      }
+    }
+  }
+}
+
+.profileText{
+  display: inline-block;
+  font-size: 16px;
+  font-family: $body-font-primary;
+  text-transform: uppercase;
+  color: $black;
+
+  @include breakpoint($small){
+    color: $secondary-colour;
+  }
+
+  &:hover{
+    text-decoration: underline;
+    @include breakpoint($small){
+      color: $secondary-colour;
+    }
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.arrow_box {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 2px solid $black;
+  padding: 5px 10px 5px 10px;
+  z-index: 999;
+  left: 50%;
+  top: 50px;
+  @include transform(translateX(-55%));
+
+  @include breakpoint($small){
+    position: initial;
+    display: table-cell;
+    vertical-align: middle;
+    background: initial;
+    border: none;
+    padding: 0;
+    left: 0;
+    @include transform(translateX(0));
+
+    a{
+      margin-right: 10px;
+    }
+  }
+
+  &.--show{
+    display: block;
+    @include breakpoint($small){
+      display: table-cell;
+    }
+  }
+}
+
+.header__logout-link{
+  display: block;
+  font-family: $body-font-primary;
+  font-size: 12px;
+  text-decoration: underline;
+  color: $black;
+}

@@ -1,0 +1,190 @@
+.login-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.login-container__img {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-container__title {
+  margin:20px 0 10px 0;
+  font-family: $header-font-primary;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: $black;
+}
+
+.login-container__login-copy {
+  font-family: $body-font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  color: $black;
+}
+
+.login-container__signup-copy {
+  font-family: $body-font-primary;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: $black;
+}
+
+.login-container__signup-link{
+  font-family: $body-font-primary;
+  font-size: 15px;
+  font-weight: 300;
+
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  }
+}
+
+.login-container___btn{
+  margin-bottom: 10px;
+  width: 100%;
+
+  @include breakpoint($small){
+    width: 250px;
+  }
+}
+
+.payment-select__title{
+  margin: 0;
+  font-family: $header-font-primary;
+  font-size: 18px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.payment-select__form{
+  margin-bottom: 10px;
+}
+
+.payment-form__card-wrapper{
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+
+.payment-form__card-radio{
+  display: inline-block;
+  margin-right: 10px !important;
+}
+
+.payment-form__card-img{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.payment-form__btn-wrapper{
+  position: relative;
+  text-align: center;
+  @include clearfix();
+
+  .btn-link-wrapper{
+    display: inline-block;
+  }
+
+  .btn-wrapper__add-card-link{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: $red;
+    min-width: 100px;
+    text-align: left;
+    float: left;
+
+    @include breakpoint($small){
+      display: inline;
+      margin-top: 0;
+      position: absolute;
+      top: 50%;
+      min-width: 100px;
+      @include transform(translateX(calc(100% + 40px)) translateY(-50%));
+    }
+  }
+}
+
+input[type="radio"].payment-form__card-radio {
+  display: none;
+}
+
+input[type="radio"].payment-form__card-radio + label span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 2px solid black;
+  margin-right: 10px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+input[type="radio"].payment-form__card-radio + label {
+  vertical-align: middle;
+  margin: 0;
+}
+
+input[type="radio"]:checked.payment-form__card-radio + label span {
+  position: relative;
+  background-color: $green;
+  border: 2px solid $green;
+}
+
+input[type="radio"]:checked.payment-form__card-radio + label span:before {
+  content: "\e013";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: 'Glyphicons Halflings';
+  color: white;
+  font-size: 16px;
+}
+
+.payment-form__card-name {
+  right: 15px;
+  top: 50%;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  font-family: $body-font-primary;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.btn-link-wrapper{
+  .flypay-button{
+    width: 100%;
+  }
+
+  @include breakpoint($small){
+    .flypay-button{
+      width: 250px;
+    }
+  }
+}
+
+.payment-form__verifone-logo{
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+
+  &:hover,
+  &:focus{
+    outline: none;
+  }
+
+  @include breakpoint($small){
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,319 @@
+.forgotten-content{
+  margin: 15px auto;
+  @include clearfix();
+
+  .powered-by-flypay{
+    margin: 0;
+    width: 70px;
+  }
+
+  @include breakpoint($small){
+    margin: 30px auto;
+    padding: 15px;
+    border: 2px solid $black;
+    width: 70%;
+  }
+
+  @include breakpoint($medium){
+    width: 60%;
+  }
+}
+
+.forgotten-form{}
+
+.forgotten-form__title{
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: $header-font-primary;
+  font-size: 22px;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include breakpoint($small){
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid $black;
+  }
+}
+
+.forgotten-email{}
+
+.passcode-reset__blurb{
+  text-align: center;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $black;
+}
+
+.passcode-reset__email-form{
+
+  .form-errors{
+    padding: 10px;
+    border: 1px solid $red;
+    font-family: $body-font-primary;
+    font-size: 14px;
+
+    p{
+      text-align: center;
+    }
+
+    &.is-visible{
+      @include animation(fade-transition .2s 1);
+    }
+  }
+
+  .flypay-button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint($small){
+    text-align: center;
+
+    .flypay-button{
+      width: 250px;
+    }
+  }
+
+  @include breakpoint($medium){
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.passcode-reset__email-wrapper{
+  position: relative;
+  margin-bottom: 15px;
+
+  label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+.passcode-reset__email{
+  width: 100%;
+  padding-left: 35px;
+}
+
+.forgotten-card{
+  &.is-visible{
+    @include animation(fade-transition .2s 1);
+  }
+
+  @include breakpoint($medium){
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.passcode-reset__last4Digit-form{
+  p{
+    text-align: center;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $black;
+  }
+
+  .form-errors{
+    padding: 10px;
+    border: 1px solid $red;
+    font-family: $body-font-primary;
+    font-size: 14px;
+
+    p{
+      text-align: center;
+    }
+
+    &.is-visible{
+      @include animation(fade-transition .2s 1);
+    }
+  }
+}
+
+.last4digits__wrapper{
+  display: table;
+  width: 100%;
+  margin-bottom: 15px;
+
+  @include breakpoint($small){
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+}
+
+.last4digits__label{
+  display: table-cell;
+  width: 30%;
+  vertical-align: middle;
+
+  h3{
+    margin: 0;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $black;
+  }
+
+  @include breakpoint($small){
+    position: absolute;
+    margin: 0;
+    width: 100px;
+    left: 0;
+    top: 50%;
+    text-align: right;
+    @include transform(translateX(calc(-100% - 10px)) translateY(-50%));
+
+    h3{
+      font-size: 18px;
+    }
+  }
+}
+
+.passcode-reset__last4Digits{
+  display: table-cell;
+  float: right;
+  width: 150px;
+  vertical-align: middle;
+  font-family: $body-font-primary;
+  text-align: right;
+
+  @include breakpoint($small){
+    text-align: left;
+  }
+}
+
+.last4Digit-form__btn-wrapper{
+  margin-bottom: 15px;
+  @include clearfix();
+
+  p{
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint($small){
+
+    p{
+      display: none!important;
+    }
+  }
+}
+
+.passcode-reset__last4Digits-btn{
+  width: 100%;
+  margin-bottom: 10px;
+
+  @include breakpoint($small){
+    display: inline-block;
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+  }
+}
+
+.passcode-reset__delete-btn{
+  width: 100%;
+  margin-bottom: 15px;
+
+  @include breakpoint($small){
+    display: inline-block;
+    float: right;
+    width: 200px;
+  }
+}
+
+.forgotten-pass{}
+
+.passcode-reset__change-passcode-form{
+
+  p{
+    text-align: center;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $black;
+  }
+
+  .passcode-wrapper{
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+
+    @include breakpoint($small){
+      position: relative;
+      width: auto;
+      display: table;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  .passcode-label{
+    margin: 0;
+    display: table-cell;
+    width: 40%;
+    vertical-align: middle;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    color: $black;
+
+    @include breakpoint($small){
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100px;
+      @include transform(translateX(calc(-100% - 10px)) translateY(-50%));
+
+    }
+  }
+
+  .passcode-boxes{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+
+    @include breakpoint($small){
+      display: inline-block;
+      float: none;
+      text-align: left;
+    }
+  }
+
+  .form-errors{
+    padding: 10px;
+    border: 1px solid $red;
+    font-family: $body-font-primary;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    p{
+      margin: 0;
+      text-align: center;
+    }
+
+    &.is-visible{
+      @include animation(fade-transition .2s 1);
+    }
+  }
+
+  @include breakpoint($small){
+    text-align: center;
+  }
+}
+
+.passcode-reset-btn{
+  width: 100%;
+  margin-bottom: 15px;
+
+  @include breakpoint($small){
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 250px;
+  }
+}

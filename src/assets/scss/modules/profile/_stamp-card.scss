@@ -1,0 +1,241 @@
+.general-section {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: $off-white;
+  position: relative;
+
+  @include breakpoint($small) {
+    display: table-cell;
+    width: 65%;
+    margin: 40px 0 0 0;
+  }
+
+  @include breakpoint($medium) {
+    width: 70%;
+  }
+}
+
+.card-title {
+  margin: 0;
+  padding: 10px 50px;
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $black;
+  text-align: center;
+  font-family: $header-font-secondary;
+  font-size: 32px;
+  text-transform: capitalize;
+  color: $red;
+  vertical-align: top;
+
+  @include breakpoint($small) {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top: none;
+  }
+
+}
+
+.stamp-card__wrapper {
+  position: relative;
+  min-height: 300px;
+}
+
+.stamp-card__container {
+  padding: 15px;
+}
+
+.stamp-card__requirements {
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: $body-font-primary-bold;
+  font-size: 14px;
+  color: $black;
+
+  @include breakpoint($small) {
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint($medium){
+    font-size: 15px;
+  }
+}
+
+.stamp-card {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  margin: 0 auto;
+  table-layout: fixed;
+  list-style: none;
+  counter-reset: stamp-counter;
+
+  li {
+    display: table-row;
+    width: 100%;
+    height: 80px;
+    padding: 0;
+  }
+
+
+  @include breakpoint($medium) {
+    width: 80%;
+  }
+}
+
+.stamp-card__stamp-container,
+.stamp-card__reward-container {
+  display: table-cell;
+  width: 50%;
+  padding: 0 15px 0 0;
+  vertical-align: middle;
+  border-bottom: 1px solid $black;
+
+  li:last-of-type & {
+    border-bottom: none;
+  }
+}
+
+.stamp-card__stamp-container {
+
+  padding-left: calc(25% - 60px);
+  padding-right: calc(25% - 60px);
+
+  @include breakpoint($x-small) {
+    padding-left: calc(25% - 70px);
+    padding-right: calc(25% - 70px);
+  }
+
+  @include breakpoint($medium) {
+    padding-left: calc(25% - 90px);
+    padding-right: calc(25% - 90px);
+  }
+
+}
+
+.stamp-card__stamp {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid rgba($black, .5);
+  counter-increment: stamp-counter;
+
+  &:before {
+    content: counter(stamp-counter);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: $body-font-primary;
+    font-size: 18px;
+    color: rgba($black, .5);
+    @include transform(translate(-50%, -50%));
+  }
+
+  &.filled:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+    z-index: 1;
+  }
+
+  &.filled.blue:after {
+    background-image: url('../images/default-reward-icon.svg');
+  }
+
+  &.filled.red:after {
+    background-image: url('../images/gbk-stamp-red.svg');
+  }
+
+  &.filled.green:after {
+    background-image: url('../images/gbk-stamp-green.svg');
+  }
+
+  &.filled:before {
+    display: none;
+  }
+  &:nth-of-type(1) {
+    float: left;
+  }
+
+  &:nth-of-type(2) {
+    float: right;
+  }
+
+  &:only-of-type {
+    float: none;
+    margin: 0 auto;
+  }
+
+  @include breakpoint($x-small) {
+
+    width: 60px;
+    height: 60px;
+
+    &.filled:after {
+      width: 60px;
+      height: 60px;
+      background-size: 60px;
+    }
+  }
+
+  @include breakpoint($medium) {
+
+    margin: 10px auto;
+    width: 80px;
+    height: 80px;
+
+    &.filled:after {
+      width: 80px;
+      height: 80px;
+      background-size: 80px;
+    }
+
+    &:only-of-type {
+      float: none;
+      margin: 10px auto;
+    }
+  }
+}
+
+.stamp-card__reward-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-family: $header-font-secondary;
+  font-size: 22px;
+  text-transform: capitalize;
+
+  &.has-reward {
+    color: $red;
+  }
+
+  &.has-reward:after {
+    content: '\f00c';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    color: $red;
+    @include transform(translateY(-50%));
+  }
+}
+
+.stamp-card__reward-description {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: $body-font-primary;
+  font-size: 14px;
+}

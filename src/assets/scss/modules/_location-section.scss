@@ -1,0 +1,373 @@
+.location-select{}
+
+.location-panel{
+  padding: 0;
+  position: relative;
+  height: auto;
+  text-align: center;
+
+  &.has-results{
+    padding-bottom: 15px;
+  }
+
+  @include breakpoint($small){
+    padding: 0;
+  }
+}
+
+.map-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .has-results &{
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint($small){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.map-wrapper__map,
+.map-wrapper__overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.map-wrapper__overlay{
+  background-color: rgba(19, 19, 19, .50);
+}
+
+.map-wrapper__title{
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-bottom: 1px;
+  font-family: $header-font-secondary;
+  font-size: 32px;
+  color: $primary-colour;
+  @include transform(rotate(-3deg));
+
+  @include breakpoint($small){
+    font-size: 32px;
+  }
+}
+
+.map-wrapper__copy{
+  position: relative;
+  padding: 0 15px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $secondary-colour;
+
+  @include breakpoint($small){
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 22px;
+  }
+
+}
+
+.location-list__wrapper{
+  max-height: 140px;
+  padding: 15px;
+  overflow: hidden;
+  text-align: left;
+  @include x-transition(all 1s ease-out);
+
+  &.has-mileage{
+    margin-bottom: 15px;
+    @include x-transition(all .4s ease-out);
+  }
+
+  &.has-mileage.no-delivery{
+    max-height: 155px;
+  }
+
+  &.list-open,
+  &.list-open.has-mileage.no-delivery{
+    max-height: 9999px;
+  }
+
+  @include breakpoint($small){
+    padding-left: 0;
+    padding-right: 0;
+    max-height: 140px;
+  }
+
+  @include breakpoint($medium){
+    max-height: 155px;
+
+    &.has-mileage.no-delivery{
+      max-height: 165px;
+    }
+  }
+}
+
+.location-input__wrapper{
+  position: relative;
+  display: block;
+
+  @include breakpoint($small){
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .fa-search{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+.location-input{
+  position: relative;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 75px;
+  padding-top: 9px;
+  padding-bottom: 5px;
+  border: none;
+  border: 2px solid $black;
+  background-color: $secondary-colour;
+  font-family: $body-font-primary;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  &.parsley-success{
+    border-color: $lt-primary-colour;
+  }
+
+  &.parsley-error{
+    border-color: $red;
+  }
+
+  @include breakpoint($medium){
+    padding-top: 15px;
+    padding-bottom: 10px;
+    line-height: 22px;
+    font-size: 22px;
+  }
+}
+
+.location-input__btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: none;
+  background-color: transparent;
+  font-family: $header-font-primary;
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 50px;
+
+  &:hover{
+    color: $red;
+  }
+
+  @include breakpoint($medium){
+    line-height: 65px;
+  }
+
+}
+
+.find-nearest__link{
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  color: $secondary-colour;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus{
+    color: $secondary-colour;
+  }
+}
+
+.results-msg{
+  font-size: 14px;
+  font-family: $body-font-primary;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 10px;
+
+  span{
+    color: $lt-primary-colour;
+  }
+
+  @include breakpoint($small){
+    font-size: 18px;
+  }
+}
+
+.location-result{
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px 15px;
+  background-color: rgba(33,33,33,.05);
+  //border: 3px solid $black;
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($small $medium){
+    width: 49%;
+    float: left;
+
+    &:nth-of-type(even){
+      float: right;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  @include breakpoint($medium){
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+
+    &:nth-of-type(3n-1){
+      float: left;
+    }
+
+    &:nth-of-type(odd){
+      margin-right: 2%;
+      float: left;
+      margin-left: 0;
+    }
+
+    &:nth-of-type(3n+3){
+      margin-right: 0;
+      float: right;
+    }
+  }
+}
+
+.location-result__btn-wrapper{
+  text-align: center;
+}
+
+.location-result__btn-wrapper button{
+  width: 100%;
+
+  @include breakpoint($small, $medium){
+    width: 49%;
+    //&:only-of-type{
+    //  width: 100%;
+    //}
+  }
+}
+
+.location-result__title{
+  font-size: 22px;
+  font-family: $header-font-primary;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @include breakpoint($medium){
+    font-size: 28px;
+  }
+
+}
+
+.location-result__mileage{
+  margin: 0;
+  padding: 0;
+  font-family: $header-font-secondary;
+  font-size: 18px;
+  text-align: center;
+  color: $tertiary-colour;
+}
+
+.location-result__deliver-btn,
+.location-result__collect-btn{
+
+  &.flypay-button {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 22px;
+    border: 2px solid $black;
+    background-color: $primary-colour;
+    color: $red;
+    @include appearance(none);
+    @include x-transition(all .2s ease-out);
+
+    //&:hover{
+    //  color: $primary-colour;
+    //  background-color: $red;
+    //}
+    
+  }
+
+}
+
+.view-all-locations-btn {
+  display: none;
+  margin-bottom: 15px;
+}
+
+.location-select__delivery-time{
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: $body-font-primary;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+
+  span{
+    font-size: 22px;
+    color: $lt-primary-colour;
+  }
+
+  @include breakpoint($small){
+    font-size: 18px;
+
+    span{
+      font-size: 24px;
+    }
+  }
+
+}
+
+.location-closed{
+  .location-result__title{
+    text-decoration: line-through;
+  }
+
+  .location-result__collect-btn{
+    border-color: transparent;
+    background: none;
+  }
+}

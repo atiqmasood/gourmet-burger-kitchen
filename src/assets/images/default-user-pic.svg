@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>default-user-pic</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="5.68434189e-14" width="50" height="50" rx="25"></rect>
+        <rect id="path-3" x="0" y="5.68434189e-14" width="50" height="50" rx="25"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" transform="translate(-203.000000, -181.000000)">
+            <g id="default-user-pic" transform="translate(203.000000, 181.000000)">
+                <g id="Group">
+                    <g id="WEBSITE-ORDERING">
+                        <g id="Group">
+                            <g id="mask-2" fill="#FFFFFF">
+                                <rect id="path-1" x="0" y="5.68434189e-14" width="50" height="50" rx="25"></rect>
+                            </g>
+                            <g id="Mask" fill="#FDEAE5">
+                                <rect id="path-1" x="0" y="5.68434189e-14" width="50" height="50" rx="25"></rect>
+                            </g>
+                            <g id="Oval-418-Clipped">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <ellipse id="Oval-418" fill="#191919" mask="url(#mask-2)" cx="24.858871" cy="17.9661017" rx="7.98387097" ry="7.34110169"></ellipse>
+                            </g>
+                            <g id="Rectangle-1884-Clipped">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <rect id="Rectangle-1884" fill="#000000" mask="url(#mask-4)" x="10" y="26.875" width="30" height="36.0381356" rx="15"></rect>
+                            </g>
+                            <g id="mask-4">
+                                <rect id="path-3" x="0" y="5.68434189e-14" width="50" height="50" rx="25"></rect>
+                            </g>
+                            <g id="Mask-Copy-2">
+                                <rect id="path-3" x="0" y="5.68434189e-14" width="50" height="50" rx="25"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
