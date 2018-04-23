@@ -1,6 +1,0 @@
-@include font-face("pdu", "../fonts/PDU/pdu_regular-webfont", $exts: eot woff ttf svg);
-@include font-face("pacifico", "../fonts/Pacifico/pacifico-webfont", $exts: eot woff ttf svg);
-@include font-face("chevin", "../fonts/Chevin/chevin-medium-webfont", $exts: eot woff ttf svg, $weight: 400, $style: normal);
-@include font-face("chevin", "../fonts/Chevin/chevin-thin-webfont", $exts: eot woff ttf svg, $weight: 300, $style: normal);
-
-//($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
