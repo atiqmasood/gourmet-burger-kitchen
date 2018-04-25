@@ -25,7 +25,7 @@ class CategoriesList extends Component {
     render() {
         const categories = this.props.categorieslist;
         const mapCategories = categories && categories.length && categories.map((category) => {
-           return <li className="menu-categories__name" key={category.id} onClick={((e) =>this.selectCategory(e, category.id, category.name))} title={category.description}>{category.name}</li>
+           return <li style={{color: this.state.selectedCategoryId === category.id && 'red'}} className="menu-categories__name" key={category.id} onClick={((e) =>this.selectCategory(e, category.id, category.name))} title={category.description}>{category.name}</li>
         });
         let itemlist = [];
         categories && categories.length && categories.filter((item) => {
